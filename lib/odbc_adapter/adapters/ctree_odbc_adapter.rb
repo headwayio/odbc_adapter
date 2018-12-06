@@ -43,13 +43,13 @@ module ODBCAdapter
         end
 
         def visit_Arel_Nodes_Offset(o, collector)
-          collector << "SKIP "
+          collector << " SKIP "
           visit o.expr, collector
           collector << " "
         end
 
         def visit_Arel_Nodes_Limit(o, collector)
-          collector << "TOP "
+          collector << " TOP "
           visit o.expr, collector
           collector << " "
         end
