@@ -31,7 +31,7 @@ module ODBCAdapter
           end
 
           if o.groups.any?
-            collector << "GROUP BY "
+            collector << " GROUP BY "
             collector = inject_join o.groups, collector, ", "
           end
 
